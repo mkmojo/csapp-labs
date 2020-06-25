@@ -154,8 +154,10 @@ int bitXor(int x, int y)
  */
 int tmin(void)
 {
-
-  return 2;
+  // return 1 << 31;
+  // logical right shift: 1101 >>> 0101;
+  // 1111 >>> 0111; negate(0111) = 1000 gives tmin
+  return (int)~(((unsigned int)(~0)) >> 1);
 }
 //2
 /*
