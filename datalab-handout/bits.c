@@ -170,7 +170,8 @@ int tmin(void)
  */
 int isTmax(int x)
 {
-  return 2;
+  int TMAX = ((unsigned int)(~0)) >> 1;
+  return !(x ^ TMAX);
 }
 /* 
  * allOddBits - return 1 if all odd-numbered bits in word set to 1
