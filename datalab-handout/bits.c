@@ -157,6 +157,7 @@ int tmin(void)
   // return 1 << 31;
   // logical right shift: 1101 >>> 0101;
   // 1111 >>> 0111; negate(0111) = 1000 gives tmin
+  // logical right shift vs arithmetic right shift: https://www.interviewcake.com/concept/java/bit-shift
   return (int)~(((unsigned int)(~0)) >> 1);
 }
 //2
