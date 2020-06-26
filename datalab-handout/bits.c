@@ -183,7 +183,8 @@ int isTmax(int x)
  */
 int allOddBits(int x)
 {
-  return 2;
+  int allOddBits = (0xAA << 24) + (0xAA << 16) + (0xAA << 8) + 0xAA;
+  return !(allOddBits ^ (x & allOddBits));
 }
 /* 
  * negate - return -x 
